@@ -1,31 +1,14 @@
-import React,{useState} from "react";
-import TodoList from "./TodoList";
+import React from "react";
 
-const TodoInsert =()=>{
-    const [input, setInput] = useState('');
-    const [todolist, setList] = useState([]);
-    const handleChange = (e) =>{
-        setInput(e.target.value);
-    }
 
-    const onClick = (e) =>{
-        console.log(input);
-        setList([...todolist, input]);
-    }
-
-    const deleteTodo = (e) =>{
-        let parentElement = e.target.parentElement;
-        console.log(parentElement);
-        parentElement.style.textDecorationLine = "line-through";
-
-    }
-
+const TodoInsert =({setList, setInput, input, todolist})=>{
+    
     return( 
-        <>
-        <input type="text" onChange={handleChange}></input>
-        <button onClick={onClick}>Add</button>
-        <TodoList todolist={todolist} deleteTodo={deleteTodo}></TodoList>
-        </>
+        <div className="addlist">
+        <input type="text" onChange={(e) => setInput(e.target.value)}></input>
+        <button onClick={() => setList([...todolist, input ])}>Submit</button>
+        
+        </div>
     );
 };
 

@@ -1,10 +1,15 @@
 
 
-const TodoList = (todolist, deleteTodo) => {
+const TodoList = (todolist) => {
+    const deleteTodo = (e) =>{
+        let parentElement = e.target.parentElement;
+        console.log(parentElement);
+        parentElement.style.textDecorationLine = "line-through";
 
+    }
     return(
         <div>
-        {todolist.map((list, idx) => (<div><span key={idx}>{list}</span> <button onClick={deleteTodo}>x</button></div>))}
+        {todolist.todolist.map((list, idx) => (<div><ul><li key="{idx}">{list} <button onClick={deleteTodo}>x</button></li></ul></div>))}
         </div>
     )
 
