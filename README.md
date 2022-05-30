@@ -1,5 +1,9 @@
 ## React TODO LIST 만들기
 
+![image](https://user-images.githubusercontent.com/46432606/171033803-685c9b67-a8b9-4d70-afd7-0a8d856cc3c3.png)
+
+
+
 ### 기능 
 1. todo list 내역 저장하기
 2. list 보여주기
