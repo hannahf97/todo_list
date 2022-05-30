@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import TodoList from "./TodoList";
 
 const TodoInsert =()=>{
     const [input, setInput] = useState('');
@@ -23,8 +24,7 @@ const TodoInsert =()=>{
         <>
         <input type="text" onChange={handleChange}></input>
         <button onClick={onClick}>Add</button>
-        
-        {todolist.map((list, idx) => (<div><span key={idx}>{list}</span> <button onClick={deleteTodo}>x</button></div>))}
+        <TodoList todolist={todolist} deleteTodo={deleteTodo}></TodoList>
         </>
     );
 };

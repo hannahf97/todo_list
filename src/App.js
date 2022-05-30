@@ -8,6 +8,7 @@ function App() {
       <header className="App-header">
         <h2> Todo list</h2>
         <TodoInsert></TodoInsert>
+        
       </header>
     </div>
   );
